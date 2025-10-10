@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alessandro Tuccio — Portfolio</title>
+  <meta name="description" content="Management Engineer — Project & Innovation Manager: progetti, timeline, competenze.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body class="theme-light">
+  <header class="topbar">
+    <div class="container">
+      <a class="logo" href="#home">AT</a>
+      <nav class="nav">
+        <a href="#about">Presentazione</a>
+        <a href="#projects">Progetti</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#skills">Skills</a>
+        <a class="btn" href="cv.pdf">Scarica CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 data-aos="fade-up"><span id="siteName"></span> <br><span class="sub" id="siteTitle"></span></h1>
+      <p class="lead" id="siteBio" data-aos="fade-up" data-aos-delay="100"></p>
+      <div class="contact" data-aos="fade-up" data-aos-delay="150">
+        <a id="siteEmail" class="link"></a>
+        <span>·</span>
+        <a id="siteLinkedin" class="link" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a id="siteGithub" class="link" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="logos" data-aos="fade-up" data-aos-delay="250">
+        <div class="logo-pill">EnergyTech</div>
+        <div class="logo-pill">Salesforce</div>
+        <div class="logo-pill">Power BI</div>
+        <div class="logo-pill">AI/ML</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 data-aos="fade-up">Progetti — Problema · Soluzione · Risultato</h2>
+      <div id="projectsGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <h2 data-aos="fade-up">Timeline</h2>
+      <div id="timelineList" class="list"></div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="skills-text">
+        <h2 data-aos="fade-right">Competenze</h2>
+        <p data-aos="fade-right" data-aos-delay="100">Panoramica delle aree chiave e un grafico radar sintetico.</p>
+      </div>
+      <div class="skills-chart" data-aos="fade-left">
+        <canvas id="skillsChart" width="420" height="420" aria-label="Grafico competenze"></canvas>
+      </div>
+    </div>
+    <div class="container">
+      <div id="skillsBadges" class="badges"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span id="footerName"></span> — Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
