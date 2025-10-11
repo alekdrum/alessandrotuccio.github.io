@@ -6,7 +6,6 @@
     "location": "Italia · Hybrid/Remote",
     "email": "alessandro.tuccio@outlook.it",
     "linkedin": "https://www.linkedin.com/",
-    "github": "https://github.com/",
     "brand_color": "#0b62f6",
     "theme": "light"
   },
@@ -20,7 +19,6 @@
       "result": "Validazione sul campo con primi clienti e lancio commerciale; struttura team (2 data scientist + dev) e processi di delivery.",
       "stack": [
         "Python",
-        "scikit‑learn",
         "Timeseries",
         "APIs",
         "Docker",
@@ -184,20 +182,28 @@
   },
   "skills_radar": {
     "labels": [
-      "Project Mgmt",
+      "Project management",
       "Processi IT",
-      "Data/BI",
-      "AI/ML",
       "Leadership",
-      "Delivery"
+      "AI/ML",
+      "Data/BI",
+      "Communication"
     ],
     "values": [
-      92,
-      85,
+      100,
+      90,
+      95,
       80,
-      72,
-      88,
-      90
+      90,
+      95
     ]
-  }
+  },
+  "interests": [
+    "Innovation",
+    "Technologies",
+    "Finance",
+    "Music",
+    "Sport",
+    "Traveling"
+  ]
 }

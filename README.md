@@ -1,16 +1,15 @@
-# Portfolio — Alessandro Tuccio (Light theme)
+# Portfolio — Alessandro Tuccio (Light theme, v2)
 
-Sezioni: **Presentazione, Progetti (narrativi), Timeline, Skills**.  
-Animazioni: **AOS**. Grafico: **Chart.js**.
+Modifiche incluse:
+- Foto profilo card arrotondata
+- Link LinkedIn, rimosso GitHub e bottone CV
+- Rimossi i tag dai progetti
+- Titolo ruolo in Timeline più dominante
+- Skills radar aggiornato (Project management 100, Processi IT 90, Leadership 95, AI/ML 80, Data/BI 90, Communication 95)
+- Sezione "Interessi" con bolle animate
+- Badge hard skills con icone (emoji)
 
-## Pubblicazione su GitHub Pages
-1. Crea un repository pubblico chiamato `USERNAME.github.io`.
-2. Carica tutti i file nella **root** del repo.
-3. (Opzionale) sostituisci `cv.pdf` con il tuo CV reale.
-4. Vai su **Settings → Pages → Deploy from a branch**, seleziona **main / root**.
-5. Apri `https://USERNAME.github.io`.
-
-## Personalizza
-- `content.json` → testi, progetti, timeline, skills, link social.
-- `styles.css` → colori/variabili CSS (colore brand: `--brand`).
-
+## Pubblicazione
+1. Repo pubblico `USERNAME.github.io`.
+2. Carica i file nella root.
+3. **Settings → Pages → main / root**.
