@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alessandro Tuccio — Portfolio</title>
+  <meta name="description" content="Management Engineer — Project & Innovation Manager: progetti, timeline, competenze.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body class="theme-light">
+  <header class="topbar">
+    <div class="container">
+      <a class="logo" href="#home">AT</a>
+      <nav class="nav">
+        <a href="#home">Presentazione</a>
+        <a href="#projects">Progetti</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interessi</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1 data-aos="fade-up"><span id="siteName"></span> <br><span class="sub" id="siteTitle"></span></h1>
+        <p class="lead" id="siteBio" data-aos="fade-up" data-aos-delay="100"></p>
+        <div class="contact" data-aos="fade-up" data-aos-delay="150">
+          <a id="siteEmail" class="link"></a>
+          <span>·</span>
+          <a id="siteLinkedin" class="link" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-photo" data-aos="zoom-in">
+        <img src="assets/profile.jpg" alt="Foto profilo di Alessandro Tuccio" class="avatar-card" />
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 data-aos="fade-up">Progetti — Problema · Soluzione · Risultato</h2>
+      <div id="projectsGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <h2 data-aos="fade-up">Timeline</h2>
+      <div id="timelineList" class="list"></div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="skills-text">
+        <h2 data-aos="fade-right">Competenze</h2>
+        <p data-aos="fade-right" data-aos-delay="100">Panoramica delle aree chiave e un grafico radar sintetico.</p>
+      </div>
+      <div class="skills-chart" data-aos="fade-left">
+        <canvas id="skillsChart" width="420" height="420" aria-label="Grafico competenze"></canvas>
+      </div>
+    </div>
+    <div class="container">
+      <div id="skillsBadges" class="badges"></div>
+    </div>
+  </section>
+
+  <section id="interests" class="interests">
+    <div class="container">
+      <h2 data-aos="fade-up">Interessi</h2>
+      <div id="bubbles" class="bubbles"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span id="footerName"></span> — Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+  // Inline data to avoid fetch issues on GitHub Pages under subpaths
+  window.PORTFOLIO_DATA = {"site": {"name": "Alessandro Tuccio", "title": "Management Engineer \u2014 Project & Innovation Manager", "bio": "Manager con oltre 10 anni nella gestione di progetti complessi in ambito energy e industria. Focalizzato su digital transformation (CRM/ERP), data analytics e AI/ML con impatto misurabile su costi e performance. Guido team multidisciplinari e ho co-fondato due startup tech.", "location": "Italia \u00b7 Hybrid/Remote", "email": "alessandro.tuccio@outlook.it", "linkedin": "https://www.linkedin.com/", "brand_color": "#0b62f6", "theme": "light"}, "projects": [{"title": "Manutenzione Predittiva AI per Fotovoltaico", "summary": "Sistema AI-based per anticipare guasti e ottimizzare O&M su impianti PV.", "role": "COO & Co\u2011Founder (2025\u2013oggi)", "problem": "Ridurre fermi impianto e costi di manutenzione, migliorando l\u2019affidabilit\u00e0 degli asset.", "solution": "Pipeline dati + modelli ML per anomaly detection e failure prediction; orchestrazione PoC con clienti reali; roadmap prodotto e go\u2011to\u2011market.", "result": "Validazione sul campo con primi clienti e lancio commerciale; struttura team (2 data scientist + dev) e processi di delivery.", "stack": ["Python", "Timeseries", "APIs", "Docker", "Power BI"]}, {"title": "Portale Performance Asset & Integrazioni", "summary": "Portale digitale per KPI e workflow integrato con Dynamics/Power BI.", "role": "Head of Operations (2024\u2013oggi)", "problem": "Dati dispersi su pi\u00f9 sistemi (API/FTP/CRM), reportistica manuale, scarsa visibilit\u00e0 real\u2011time.", "solution": "Integrazione API/FTP, data model unificato, dashboard operative e governance processi.", "result": "\u201315% Opex e maggiore efficienza operativa grazie alla digitalizzazione end\u2011to\u2011end.", "stack": ["MS Dynamics 365", "Power BI", "APIs", "ETL", "Automation"]}, {"title": "Startup AI & Analytics per l\u2019Industria", "summary": "Servizi di data science e ML con focus su use case industriali.", "role": "CEO & Co\u2011Founder (2021\u20132023)", "problem": "Portare valore rapido e misurabile con team snelli e budget limitati.", "solution": "Portfolio use case, discovery rapido, MLOps leggero, contratti a milestone.", "result": "10 contratti internazionali e primo utile entro 24 mesi.", "stack": ["Python", "Pandas", "ML", "Dashboards", "Cloud"]}, {"title": "Adozione Salesforce a livello europeo", "summary": "Raccolta requisiti, mappatura processi, casi d\u2019uso e adozione.", "role": "Project Manager (2019\u20132021, 2022\u20132023)", "problem": "Allineare processi multi\u2011paese a un CRM unico, riducendo frizioni operative.", "solution": "Blueprint processi, governance, enablement utenti, KPI di adozione.", "result": "Maggiore efficienza operativa e integrazione IT cross\u2011country.", "stack": ["Salesforce", "Process Mapping", "Change Mgmt"]}], "timeline": [{"period": "2025\u2013oggi", "role": "COO & Co\u2011Founder", "org": "Startup EnergyTech", "highlights": ["Sistema AI manutenzione predittiva per PV", "Team tecnico (2 DS + dev)", "PoC con clienti \u2192 lancio"]}, {"period": "2024\u2013oggi", "role": "Head of Operations", "org": "Settore Energia \u2013 Impianti tecnologici", "highlights": ["Portale digitale KPI con integrazioni", "\u201315% Opex", "Team: 3 PM, 1 Asset Manager, 2 Project Engineer"]}, {"period": "2022\u20132023", "role": "Project Manager (Digital)", "org": "Energy", "highlights": ["Lead adozione Salesforce", "Allineamento processi IT", "Vendor & logistics optimization"]}, {"period": "2021\u20132023", "role": "CEO & Co\u2011Founder", "org": "Startup AI & Analytics", "highlights": ["10 contratti internazionali", "Utile operativo in 2 anni", "Delivery progetti data/ML"]}, {"period": "2019\u20132021", "role": "Project Manager", "org": "Energy \u2013 Impianti tecnologici", "highlights": ["Direzione tecnica e operativa", "Integrazione IT con CTO", "Efficienza operativa"]}, {"period": "2017\u20132018", "role": "Senior Project Planner", "org": "Power Generation (EPC)", "highlights": ["Pianificazione EPC internazionali", "Team planning sede+cantiere"]}, {"period": "2017", "role": "Project Manager", "org": "Centro di ricerca UE", "highlights": ["MS Project Server", "KPI, dashboard, SLA"]}, {"period": "2013\u20132016", "role": "Project Engineer", "org": "Raffinerie ENI (SbSetec/FBM)", "highlights": ["Manutenzione ordinaria/straordinaria", "Processi e dinamiche impianto"]}], "skills": {"Project Management": ["PMBOK", "Waterfall", "Agile", "CPM"], "PM Tools": ["MS Project", "Primavera Oracle", "Cloud Coach", "Trello"], "ERP & CRM": ["SAP", "Salesforce", "MS Dynamics 365"], "Analytics & Data": ["Power BI", "Python", "SPSS", "Google Analytics"], "Design & IT": ["BPMN", "UML", "AutoCAD 2D", "Visio", "Canva"]}, "skills_radar": {"labels": ["Project management", "Processi IT", "Leadership", "AI/ML", "Data/BI", "Communication"], "values": [100, 90, 95, 80, 90, 95]}, "interests": ["Innovation", "Technologies", "Finance", "Music", "Sport", "Traveling"]};
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
