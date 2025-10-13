@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 
-<body>
+<body class="theme-light">
   <header class="topbar">
     <div class="container">
       <a class="logo" href="#home">AT</a>
@@ -54,14 +54,26 @@
           <p><strong>Problema</strong> — Fermi impianto e costi O&M elevati.</p>
           <p><strong>Soluzione</strong> — Pipeline dati + modelli ML per anomaly detection e failure prediction.</p>
           <p><strong>Risultato</strong> — Scala su più asset; potenziale +3–4% revenue annuo.</p>
+          <div class="stack">
+            <span class="badge">🐍 Python</span>
+            <span class="badge">🔌 APIs</span>
+            <span class="badge">🐳 Docker</span>
+            <span class="badge">📊 Power BI</span>
+          </div>
         </article>
 
         <article class="project" data-aos="fade-up">
           <h3>Portale KPI & Asset Performance</h3>
           <p class="meta">Head of Operations (2024–oggi)</p>
-          <p><strong>Problema</strong> — Dati frammentati tra sistemi e poca visibilità real-time.</p>
+          <p><strong>Problema</strong> — Dati frammentati e poca visibilità real-time.</p>
           <p><strong>Soluzione</strong> — Integrazione Dynamics 365 + Power BI + OT e data model unico.</p>
           <p><strong>Risultato</strong> — −15% Opex e P/L real-time per corporate e clienti.</p>
+          <div class="stack">
+            <span class="badge">🧩 MS Dynamics</span>
+            <span class="badge">📊 Power BI</span>
+            <span class="badge">🧪 ETL</span>
+            <span class="badge">🤖 Automation</span>
+          </div>
         </article>
 
         <article class="project" data-aos="fade-up">
@@ -70,6 +82,12 @@
           <p><strong>Problema</strong> — Portare valore rapido con team snelli.</p>
           <p><strong>Soluzione</strong> — Use case library, discovery rapidi, MLOps leggero.</p>
           <p><strong>Risultato</strong> — 10 contratti internazionali (Amnesty LUX, chatbot AI per beauty).</p>
+          <div class="stack">
+            <span class="badge">🐍 Python</span>
+            <span class="badge">📊 Pandas</span>
+            <span class="badge">🤖 ML</span>
+            <span class="badge">☁️ Cloud</span>
+          </div>
         </article>
       </div>
     </div>
@@ -86,7 +104,7 @@
         </div>
         <div>
           <div class="exp-role">COO & Co-Founder</div>
-          <div class="exp-desc">Sviluppo di uno strumento AI-based per manutenzione predittiva su impianti PV. Team 3 persone, venduti i primi 2 PoC, +3-4% revenue potenziale.</div>
+          <div class="exp-desc">Sviluppo di strumento AI-based per manutenzione predittiva PV. Team 3 persone, +3-4 % revenue annuo.</div>
         </div>
       </div>
 
@@ -97,7 +115,7 @@
         </div>
         <div>
           <div class="exp-role">Head of Operations</div>
-          <div class="exp-desc">Trasformazione digitale data-driven. Integrazione Power BI + Dynamics 365, −15% Opex, P/L in tempo reale.</div>
+          <div class="exp-desc">Trasformazione digitale data-driven: Power BI + Dynamics 365, −15 % Opex, P/L real-time.</div>
         </div>
       </div>
 
@@ -108,7 +126,7 @@
         </div>
         <div>
           <div class="exp-role">Project Manager — Digital Transformation</div>
-          <div class="exp-desc">Rilancio adozione Salesforce: fix bug, remap processi, change management. Adozione completa corporate.</div>
+          <div class="exp-desc">Rilancio Salesforce: fix bug, remap processi, change management. Adozione completa corporate.</div>
         </div>
       </div>
 
@@ -119,7 +137,7 @@
         </div>
         <div>
           <div class="exp-role">Project Manager — Digital Transformation</div>
-          <div class="exp-desc">Implementazione globale Salesforce con HQ. Supporto al CTO per CMMS proprietario AI/IoT.</div>
+          <div class="exp-desc">Implementazione globale Salesforce; supporto al CTO per CMMS AI/IoT proprietario.</div>
         </div>
       </div>
 
@@ -130,7 +148,7 @@
         </div>
         <div>
           <div class="exp-role">Project Engineer / Planner</div>
-          <div class="exp-desc">Progetti EPC & O&M internazionali; consolidamento competenze su processi industriali e tool IT.</div>
+          <div class="exp-desc">Progetti EPC &amp; O&amp;M internazionali; uso avanzato di CRM, ERP e strumenti di monitoraggio.</div>
         </div>
       </div>
     </div>
@@ -139,32 +157,48 @@
   <section id="skills" class="skills">
     <div class="container">
       <div class="skills-text">
-        <h2>Competenze</h2>
-        <p>Project management, Processi IT, Leadership, AI/ML, Data/BI, Communication</p>
+        <h2 data-aos="fade-right">Competenze</h2>
+        <p data-aos="fade-right" data-aos-delay="100">Radar chart e competenze chiave con badge ed emoji.</p>
       </div>
+      <div class="skills-chart" data-aos="fade-left">
+        <canvas id="skillsChart" width="420" height="420"></canvas>
+      </div>
+    </div>
+    <div class="container">
+      <div id="skillsBadges" class="badges"></div>
     </div>
   </section>
 
   <section id="interests" class="interests">
     <div class="container">
       <h2 data-aos="fade-up">Interessi</h2>
-      <div class="bubbles">
-        <div class="bubble">Innovation</div>
-        <div class="bubble">Technologies</div>
-        <div class="bubble">Finance</div>
-        <div class="bubble">Music</div>
-        <div class="bubble">Sport</div>
-        <div class="bubble">Traveling</div>
-      </div>
+      <div id="bubbles" class="bubbles"></div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      <p>© Alessandro Tuccio — Portfolio</p>
+      <p>© <span id="year"></span> Alessandro Tuccio — Portfolio</p>
     </div>
   </footer>
 
+  <script>
+    window.PORTFOLIO_DATA = {
+      "skills_radar": {
+        "labels": ["Project management","Processi IT","Leadership","AI/ML","Data/BI","Communication"],
+        "values": [100, 90, 95, 80, 90, 95]
+      },
+      "skills": {
+        "Project Management": ["PMBOK","Waterfall","Agile","CPM"],
+        "PM Tools": ["MS Project","Primavera Oracle","Trello"],
+        "ERP & CRM": ["SAP","Salesforce","MS Dynamics 365"],
+        "Analytics & Data": ["Power BI","Python","SPSS","Google Analytics"],
+        "Design & IT": ["BPMN","UML","AutoCAD 2D","Visio","Canva"]
+      },
+      "interests": ["Innovation","Technologies","Finance","Music","Sport","Traveling"]
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="scripts.js"></script>
 </body>
