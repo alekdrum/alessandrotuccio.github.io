@@ -12,8 +12,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   background: var(--bg);
@@ -28,11 +27,11 @@ body {
   padding: 0 20px;
 }
 
-/* === Topbar === */
+/* === Header === */
 .topbar {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--border);
   z-index: 1000;
@@ -54,7 +53,7 @@ body {
   justify-content: center;
   text-decoration: none;
   font-weight: 800;
-  box-shadow: 0 8px 20px rgba(14, 15, 18, 0.15);
+  box-shadow: 0 8px 20px rgba(14,15,18,0.15);
 }
 .nav a {
   color: var(--text);
@@ -114,7 +113,7 @@ body {
   width: 160px;
   height: auto;
   border-radius: 18px;
-  box-shadow: 0 14px 28px rgba(11, 98, 246, 0.12);
+  box-shadow: 0 14px 28px rgba(11,98,246,0.12);
   border: 1px solid var(--border);
   justify-self: end;
 }
@@ -138,13 +137,12 @@ body {
   border: 1px solid var(--border);
   border-radius: 18px;
   background: #fff;
-  position: relative;
-  box-shadow: 0 10px 24px rgba(14, 15, 18, 0.06);
+  box-shadow: 0 10px 24px rgba(14,15,18,0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .project:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 32px rgba(14, 15, 18, 0.08);
+  box-shadow: 0 16px 32px rgba(14,15,18,0.08);
 }
 .project h3 {
   margin: 0 0 8px;
@@ -158,6 +156,20 @@ body {
 .project p {
   margin: 0 0 8px;
   color: var(--muted);
+}
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.badge {
+  padding: 6px 10px;
+  background: var(--chip);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
 }
 
 /* === Experience === */
@@ -178,7 +190,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 18px;
   background: #fff;
-  box-shadow: 0 10px 24px rgba(14, 15, 18, 0.06);
+  box-shadow: 0 10px 24px rgba(14,15,18,0.06);
   margin-bottom: 16px;
   position: relative;
   overflow: hidden;
@@ -188,7 +200,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(11, 98, 246, 0.08), transparent 35%);
+  background: linear-gradient(180deg, rgba(11,98,246,0.08), transparent 35%);
 }
 .exp-period {
   font-weight: 900;
@@ -221,6 +233,18 @@ body {
   margin: 0 0 8px;
   font-size: 30px;
 }
+.skills-chart {
+  padding: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  background: #fff;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
 
 /* === Interests === */
 .interests {
@@ -242,12 +266,12 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  box-shadow: 0 10px 24px rgba(11, 98, 246, 0.08);
+  box-shadow: 0 10px 24px rgba(11,98,246,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .bubble:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 18px 32px rgba(11, 98, 246, 0.12);
+  box-shadow: 0 18px 32px rgba(11,98,246,0.12);
 }
 
 /* === Footer === */
@@ -269,6 +293,9 @@ body {
     justify-self: start;
   }
   .projects .grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-card {
     grid-template-columns: 1fr;
   }
 }
