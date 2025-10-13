@@ -1,10 +1,10 @@
-# Portfolio — Alessandro Tuccio (v4)
+# Portfolio — Alessandro Tuccio (v5 — Datapizza-ready)
 
-Fix robustezza GitHub Pages:
-- **Niente fetch di JSON**: i contenuti sono inline in `index.html` → elimina problemi di path/CORS su project pages.
-- **Foto profilo ridotta** (160px max) e ottimizzata.
-- Tutte le modifiche richieste già integrate (no GitHub, no bottone CV, no tag, timeline, radar aggiornato, interessi a bolle, badge con icone).
+- Titolo: **Management Engineer | Innovation Manager**
+- Esperienze: **card orizzontali** con sfumatura blu, storytelling AI/Digital/Impatto
+- Inline data (niente fetch)
+- Foto profilo ridotta (160px), progetti descrittivi, radar skills, interessi a bolle
 
 ## Deploy
-1) Carica **tutti i file** nella root del repo `USERNAME.github.io` *o* nella root del tuo **project page**.
-2) Hard refresh dopo il commit (Ctrl+F5 / Cmd+Shift+R).
+1) Carica i file nella root del repo GitHub Pages (project o user page).  
+2) Commit → hard refresh (Ctrl+F5 / Cmd+Shift+R).

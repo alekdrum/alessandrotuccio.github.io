@@ -3,7 +3,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const DATA = window.PORTFOLIO_DATA || {};
 
-// Map some icons to hard skills (emoji for quick visual)
 const iconMap = [
   {k:'Python', e:'🐍'},
   {k:'Power BI', e:'📊'},
@@ -31,8 +30,8 @@ function withIcon(label){
   return label;
 }
 
-// Fill hero
-(function fillHero(){
+// Hero
+(function(){
   const s = DATA.site || {};
   document.getElementById('siteName').textContent = s.name || '';
   document.getElementById('siteTitle').textContent = s.title || '';
@@ -45,7 +44,7 @@ function withIcon(label){
 })();
 
 // Projects
-(function fillProjects(){
+(function(){
   const grid = document.getElementById('projectsGrid');
   (DATA.projects || []).forEach(p => {
     const el = document.createElement('article');
@@ -63,48 +62,52 @@ function withIcon(label){
   });
 })();
 
-// Timeline
-(function fillTimeline(){
-  const tl = document.getElementById('timelineList');
-  (DATA.timeline || []).forEach(t => {
-    const el = document.createElement('div');
-    el.className = 'tl-item';
-    el.setAttribute('data-aos','fade-up');
-    el.innerHTML = `
-      <div class="tl-period">${t.period}</div>
-      <div class="tl-role">${t.role}</div>
-      <div class="tl-org">${t.org}</div>
-      ${(t.highlights && t.highlights.length) ? `<ul class="tl-hi">` + t.highlights.map(h=>`<li>${h}</li>`).join('') + `</ul>` : ''}
+// Experiences
+(function(){
+  const list = document.getElementById('expList');
+  (DATA.experiences || []).forEach(xp => {
+    const card = document.createElement('article');
+    card.className = 'exp-card';
+    card.setAttribute('data-aos','fade-up');
+    card.innerHTML = `
+      <div class="exp-side">
+        <div class="exp-period">${xp.period}</div>
+        <div class="exp-org">${xp.org}</div>
+      </div>
+      <div>
+        <div class="exp-role">${xp.role}</div>
+        <div class="exp-desc">${xp.desc}</div>
+      </div>
     `;
-    tl.appendChild(el);
+    list.appendChild(card);
   });
 })();
 
-// Skills radar
-(function fillSkills(){
+// Skills radar + badges
+(function(){
   const radar = DATA.skills_radar || null;
   const ctx = document.getElementById('skillsChart');
-  if (!ctx || !radar) return;
-  new Chart(ctx, {
-    type: 'radar',
-    data: {
-      labels: radar.labels,
-      datasets: [{
-        label: 'Livello',
-        data: radar.values,
-        fill: true,
-        backgroundColor: 'rgba(11,98,246,0.12)',
-        borderColor: 'rgba(14,15,18,0.9)',
-        pointBackgroundColor: 'rgba(14,15,18,0.9)'
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: { r: { beginAtZero: true, max: 100 } },
-      plugins: { legend: { display: false } }
-    }
-  });
-
+  if (ctx && radar){
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: radar.labels,
+        datasets: [{
+          label: 'Livello',
+          data: radar.values,
+          fill: true,
+          backgroundColor: 'rgba(11,98,246,0.12)',
+          borderColor: 'rgba(14,15,18,0.9)',
+          pointBackgroundColor: 'rgba(14,15,18,0.9)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: { r: { beginAtZero: true, max: 100 } },
+        plugins: { legend: { display: false } }
+      }
+    });
+  }
   const sb = document.getElementById('skillsBadges');
   const groups = DATA.skills || {};
   Object.entries(groups).forEach(([cat, items]) => {
@@ -127,8 +130,8 @@ function withIcon(label){
   });
 })();
 
-// Interests bubbles + float animation
-(function interests(){
+// Interests bubbles + float
+(function(){
   const bubbles = document.getElementById('bubbles');
   (DATA.interests || []).forEach((t, i) => {
     const b = document.createElement('div');
