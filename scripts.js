@@ -38,6 +38,7 @@ Object.entries(skills).forEach(([cat, list]) => {
     const b = document.createElement('span');
     b.className = 'badge';
     b.textContent = skill;
+    b.style.animation = `float ${5 + idx}s ease-in-out ${idx * 0.3}s infinite alternate`;
     wrap.appendChild(b);
   });
   sb.appendChild(title);
