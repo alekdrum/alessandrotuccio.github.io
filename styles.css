@@ -239,11 +239,49 @@ html, body {
   border-radius: 16px;
   background: #fff;
 }
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
+/* Badge con gradiente, icona tonda e testo centrato */
+.badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0b62f6 0%, #6ad3ff 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  border: none;
+  box-shadow: 0 8px 22px rgba(11,98,246,.22);
+  letter-spacing: .2px;
+  text-align: center;       /* centro il testo all'interno */
+  line-height: 1.1;
+}
+
+.badge .icon{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.18);  /* cerchietto semi-trasparente */
+  font-size: 14px;                    /* dimensione emoji/icona */
+  line-height: 1;                     /* evita slittamenti verticali */
+}
+
+.badge .label{
+  display: inline-block;
+  text-align: center;  /* testo centrato anche su 2 righe */
+  white-space: nowrap; /* togli se vuoi andare a capo su schermi stretti */
+}
+
+/* un tocco al volo su hover */
+.badge:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(11,98,246,.28);
+  transition: all .2s ease;
 }
 
 /* === Interests === */
