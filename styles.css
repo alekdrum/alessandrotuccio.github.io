@@ -110,7 +110,7 @@ html, body {
   text-decoration: underline;
 }
 .avatar-card {
-  width: 160px;
+  width: 320px;
   height: auto;
   border-radius: 18px;
   box-shadow: 0 14px 28px rgba(11,98,246,0.12);
